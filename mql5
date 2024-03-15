@@ -1,0 +1,103 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                       Multiple Charts Symbol Switch|
+//|                                Developer's site: forexroboteasy.com|
+//|                                      Developed by: Forex Robot Easy Team|
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//|                        Symbol Switching Functions                 |
+//+------------------------------------------------------------------+
+
+// Function to switch between symbols on multiple charts
+void SwitchSymbol(string symbol)
+{
+   // Loop through all open charts
+   for(int i=0; i<ChartCount(); i++)
+   {
+      // Switch to the desired symbol on each chart
+      ChartSetSymbol(0, symbol);
+   }
+}
+
+// Function to update chart data when switching symbols
+void UpdateChartData()
+{
+   // Loop through all open charts
+   for(int i=0; i<ChartCount(); i++)
+   {
+      // Refresh the chart data
+      ChartRedraw(0);
+   }
+}
+
+// Function to view and analyze different currency pairs efficiently
+void ViewAndAnalyze()
+{
+   // Add your code here to view and analyze different currency pairs efficiently
+   // ...
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//|                 Customizable Button List Functions                |
+//+------------------------------------------------------------------+
+
+// Function to create a customizable button list for symbol switching
+void CreateButtonList(int x, int y)
+{
+   // Add your code here to create a button list for symbol switching
+   // ...
+   // ...
+}
+
+// Function to set the position of the button list
+void SetButtonPosition(int x, int y)
+{
+   // Add your code here to set the position of the button list
+   // ...
+   // ...
+}
+
+// Function to arrange the buttons in a layout
+void ArrangeButtonLayout()
+{
+   // Add your code here to arrange the buttons in a layout
+   // ...
+   // ...
+}
+
+//+------------------------------------------------------------------+
+//|                         Main Program                              |
+//+------------------------------------------------------------------+
+
+// Main program to execute the symbol switching and button list functions
+void OnStart()
+{
+   // Switch to the desired symbol
+   string symbol = 'EURUSD';
+   SwitchSymbol(symbol);
+   
+   // Update the chart data
+   UpdateChartData();
+   
+   // View and analyze different currency pairs
+   ViewAndAnalyze();
+   
+   // Create the button list
+   int x = 100;
+   int y = 200;
+   CreateButtonList(x, y);
+   
+   // Set the position of the button list
+   int newX = 300;
+   int newY = 400;
+   SetButtonPosition(newX, newY);
+   
+   // Arrange the buttons in a layout
+   ArrangeButtonLayout();
+   
+   // End of the program
+   Print('Program execution completed.');
+}
+
